@@ -1,3 +1,4 @@
+using TirandoAsRodinhas.Endpoints;
 using TirandoAsRodinhas.Infra.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,5 +18,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapMethods(RegisterGetAll.Template, RegisterGetAll.Methods, RegisterGetAll.Handle);
 
 app.Run();
