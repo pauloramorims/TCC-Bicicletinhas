@@ -2,7 +2,9 @@
 
 namespace TirandoAsRodinhas.Endpoints; 
 
-public record class PessoasFisResponse (string Cpf, string Nome, string Email );
+public record class PessoasFisResponse (string Cpf, string Nome, string Email, string Cep, string Logradouro, string Complemento,
+                int Numero, string Bairro, string Cidade, string Estado, string TelCelular, string TelFixo,
+                DateTime CreatedOn, Guid Id );
 /*{
     public 
     public DateTime CreatedOn { get; set; }

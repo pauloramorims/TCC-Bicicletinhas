@@ -18,7 +18,9 @@ public class QueryAllPessoasFisicas
         var query =
             @"
             SELECT
-                pf.Cpf, pf.Nome, c.Email
+                pf.Cpf, pf.Nome, c.Email, e.CEP, e.Logradouro, e.Complemento,
+                e.Numero, e.Bairro, e.Cidade, e.Estado, c.TelCelular, c.TelFixo,
+                p.CreatedOn, p.Id
             FROM PessoasFisicas pf
             INNER JOIN Parceiros p on
             pf.ParceiroId = p.Id
@@ -31,8 +33,4 @@ public class QueryAllPessoasFisicas
         return await db.QueryAsync<PessoasFisResponse>( query, new { page, rows }
         );
     }
-    /*, p.Id as ParceiroId, e.CEP, e.Logradouro, e.Complemento,
-                e.Numero, e.Bairro, e.Cidade, e.Estado, c.Email, c.TelCelular, c.TelFixo,
-                p.CreatedOn
-    */
 }
