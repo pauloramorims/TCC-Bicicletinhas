@@ -69,3 +69,4 @@ C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas\obj\Debug\net
 C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas\obj\Debug\net6.0\ref\TirandoAsRodinhas.dll
 C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas\obj\Debug\net6.0\TirandoAsRodinhas.pdb
 C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas\obj\Debug\net6.0\TirandoAsRodinhas.genruntimeconfig.cache
+C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas\bin\Debug\net6.0\Dapper.dll

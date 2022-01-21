@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ye2njoGrCxVteC8WdvHtducNqmW92U7AYB7siL1hgvw2Dux/EuME1EWaKVm07OyY18xEgVxEJYRgr7miUhvqEQ==",
+  "dgSpecHash": "NNY8FX33UfawTwdu+QhlhEZXZXHvukvjNr4K6jHJQsWljON8RzGUPGBPMBh2YZDLj+eoM2nS8l3wDIGjjbWaMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\paulo.silva\\source\\repos\\TCC-Bicicletas\\TirandoAsRodinhas\\TirandoAsRodinhas.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\paulo.silva\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\paulo.silva\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\paulo.silva\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\paulo.silva\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.1\\microsoft.aspnetcore.cryptography.internal.6.0.1.nupkg.sha512",

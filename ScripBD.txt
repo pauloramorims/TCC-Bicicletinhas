@@ -1,0 +1,28 @@
+↓↓CADASTRAR EMPRESA↓↓
+
+INSERT INTO Enderecos(Id, CEP, Logradouro, Numero, Complemento, Bairro, Cidade, Estado)
+VALUES ('ade03a2a-9f87-4402-97c9-2344b839ae2a', '74650100', 'Rua Dona Stela', 422, 'Res Caldas Novas', 'Negrao de Lima', 'Goiania', 'GO')
+
+INSERT INTO Contatos(Id, TelCelular, TelFixo, Email)
+VALUES ('ade03a2a-9f87-4402-97c9-2344b839ae2b','62982241865','6235953531','pauloramorims@gmail.com')
+
+INSERT INTO Empresas(Id, CNPJ, RazaoSocial, NomeFantasia, EnderecoId, ContatoId)
+VALUES ('ade03a2a-9f87-4402-97c9-2344b839ae2c', '21131395000143', 'Aliare Co', 'MyFarm', 'ade03a2a-9f87-4402-97c9-2344b839ae2a','ade03a2a-9f87-4402-97c9-2344b839ae2b' )
+
+↑↑CADASTRAR EMPRESA↑↑
+
+↓↓CADASTRAR PARCEIRO↓↓
+
+INSERT INTO Enderecos(Id, CEP, Logradouro, Numero, Complemento, Bairro, Cidade, Estado)
+VALUES ('7ca916d2-c7dc-42cd-bdbb-791c297b40df', '74650100', 'Rua Dona Stela', 422, 'Res Caldas Novas', 'Negrao de Lima', 'Goiania', 'GO')
+
+INSERT INTO Contatos(Id, TelCelular, TelFixo, Email)
+VALUES ('67438e40-2a3b-4200-a758-e64b69dc961c','62922221000','6235953530','alguem@gmail.com')
+
+INSERT INTO Parceiros(Id, EnderecoId, ContatoId, CreatedOn, EditedOn, Active, EmpresaId)
+VALUES ('5ad98a32-0a8b-471d-aa1c-e6cedef4404f','7ca916d2-c7dc-42cd-bdbb-791c297b40df','67438e40-2a3b-4200-a758-e64b69dc961c','2022-01-21','2022-01-21','1', 'ade03a2a-9f87-4402-97c9-2344b839ae2c')
+
+INSERT INTO PessoasFisicas(Id, Cpf, Nome, ParceiroId)
+VALUES ('2f7bfa62-86ec-4d18-a4ba-c92583524b26', '05173169191', 'Paulo Ricardo Amorim','5ad98a32-0a8b-471d-aa1c-e6cedef4404f')
+
+↑↑CADASTRAR PARCEIRO↑↑
