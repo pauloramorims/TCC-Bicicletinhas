@@ -1,4 +1,4 @@
-﻿namespace TirandoAsRodinhas.Domain.Cadastro;
+﻿namespace TirandoAsRodinhas.Domain.Register;
 
 public class Contato : Entity
 {
