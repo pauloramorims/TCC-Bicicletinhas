@@ -6,11 +6,6 @@ public record class PessoasFisResponse (string Cpf, string Nome, string Email, s
                 int Numero, string Bairro, string Cidade, string Estado, string TelCelular, string TelFixo,
                 DateTime CreatedOn, Guid Id );
 /*{
-    public 
-    public DateTime CreatedOn { get; set; }
-    public bool Active { get; set; }
-    public Guid ParceiroId { get; set; }
-
     /*Preciso retornar
      id de parceiro
     cpf ou cnpj do meu parceiro

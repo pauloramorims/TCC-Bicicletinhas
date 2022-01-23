@@ -26,3 +26,38 @@ INSERT INTO PessoasFisicas(Id, Cpf, Nome, ParceiroId)
 VALUES ('2f7bfa62-86ec-4d18-a4ba-c92583524b26', '05173169191', 'Paulo Ricardo Amorim','5ad98a32-0a8b-471d-aa1c-e6cedef4404f')
 
 ↑↑CADASTRAR PARCEIRO↑↑
+
+
+INSERT INTO Contatos(Id, TelCelular, TelFixo, Email)
+VALUES ('3727c06a-4b4e-46db-b756-a144b4860a7c','62987656798','6234435467','outroalguem2@gmail.com')
+
+INSERT INTO Enderecos(Id, CEP, Logradouro, Numero, Complemento, Bairro, Cidade, Estado)
+VALUES ('06437555-5451-4814-9ca0-effbfaf35724', '74690341', 'Rua Nova Iguaçu', 345, 'Res Recanto Londres', 'Setor Vila Nova', 'Goiania', 'GO')
+
+INSERT INTO Parceiros(Id, EnderecoId, ContatoId, CreatedOn, EditedOn, Active, EmpresaId)
+VALUES ('334c4272-f9c1-42f3-987b-35133e6e601d','06437555-5451-4814-9ca0-effbfaf35724','3727c06a-4b4e-46db-b756-a144b4860a7c','2022-01-22','2022-01-22','1', 'ade03a2a-9f87-4402-97c9-2344b839ae2c')
+
+INSERT INTO DocsFinanceiros (Id, Movimentacao, Observacao, ParceiroId, Valor, EmpresaId)
+VALUES ('c8aa5795-b2fb-421c-8640-dd9a09d21ca7', 'Pagamento', 'Prestação de serviço de Jardineiro','334c4272-f9c1-42f3-987b-35133e6e601d', 6770.70, 'ade03a2a-9f87-4402-97c9-2344b839ae2c')
+
+INSERT INTO PessoasFisicas(Id, Cpf, Nome, ParceiroId)
+VALUES ('90210c1c-2892-4729-9c7a-b558f72f00b2', '75496235569', 'Luiz Carlos Adré Gomide','334c4272-f9c1-42f3-987b-35133e6e601d')
+
+INSERÇÃO DE DADOS
+
+
+iNSERT INTO Contatos(Id, TelCelular, TelFixo, Email)
+VALUES ('3566e1d1-3295-47a2-8ef7-718364d64655','6291807898','6234456789','camilasn@gmail.com')
+
+INSERT INTO Enderecos(Id, CEP, Logradouro, Numero, Complemento, Bairro, Cidade, Estado)
+VALUES ('a0fc8cf9-a9ac-4ac0-ab30-7f927d2b7984', '74690341', 'Rua Cristal', 345, 'Res Recanto Belgica', 'Jardim Novo Mundo', 'Goiania', 'GO')
+
+INSERT INTO Parceiros(Id, EnderecoId, ContatoId, CreatedOn, EditedOn, Active, EmpresaId)
+VALUES ('b3663292-70b5-489d-87fa-57554928c398','a0fc8cf9-a9ac-4ac0-ab30-7f927d2b7984','3566e1d1-3295-47a2-8ef7-718364d64655','2022-01-22','2022-01-22','1', 'ade03a2a-9f87-4402-97c9-2344b839ae2c')
+
+INSERT INTO DocsFinanceiros (Id, Movimentacao, Observacao, ParceiroId, Valor, EmpresaId)
+VALUES ('9bd125e9-921f-42f0-bb8a-b226664fa051', 'Recebimento', 'Referente aos servicos prestados','b3663292-70b5-489d-87fa-57554928c398', 7570.70, 'ade03a2a-9f87-4402-97c9-2344b839ae2c')
+
+
+INSERT INTO PessoasFisicas(Id, Cpf, Nome, ParceiroId)
+VALUES ('f067afe4-6cf8-45bb-a3a3-2e4becd23091', '98476269191', 'Ana Vitoria Luz','b3663292-70b5-489d-87fa-57554928c398')

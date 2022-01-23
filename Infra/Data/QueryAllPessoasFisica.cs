@@ -3,16 +3,16 @@ using TirandoAsRodinhas.Endpoints;
 
 namespace TirandoAsRodinhas.Infra.Data;
 
-public class QueryAllPessoasFisicas
+public class QueryAllPessoasFisica
 {
     private readonly IConfiguration configuration;
 
-    public QueryAllPessoasFisicas(IConfiguration configuration)
+    public QueryAllPessoasFisica(IConfiguration configuration)
     {
         this.configuration = configuration;
     }
 
-    public async Task<IEnumerable<PessoasFisResponse>> Execute(int page, int rows)
+    public async Task<IEnumerable<PessoasFisResponse>> Execute()
     {
         var db = new SqlConnection(configuration["ConnectionString:BiciSemRodinhas"]);
         var query =
@@ -29,8 +29,9 @@ public class QueryAllPessoasFisicas
             INNER JOIN Contatos c on
             c.Id = p.ContatoId
             order by pf.Nome
-            OFFSET (@page -1 ) * @rows ROWS FETCH NEXT @rows ROWS ONLY";
-        return await db.QueryAsync<PessoasFisResponse>( query, new { page, rows }
+            "; //OFFSET (@page -1 ) * @rows ROWS FETCH NEXT @rows ROWS ONLY --> Pesquisa por paginação
+        return await db.QueryAsync<PessoasFisResponse>( query, new {}
         );
+
     }
 }
