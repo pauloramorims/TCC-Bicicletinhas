@@ -1,19 +1,17 @@
 ﻿using TirandoAsRodinhas.Infra.Data;
-using TirandoAsRodinhas.Domain.Register;
 
 namespace TirandoAsRodinhas.Endpoints;
 
 
-
-public class PessoasFisGetAll
+public class ParceirosGetAll
 {
-    public static string Template => "/pessoasfisicas";
+    public static string Template => "/parceiros";
     public static string[] Methods => new string[] { HttpMethod.Get.ToString() };
     public static Delegate Handle => Action;
 
 
 
-    public static async Task<IResult> Action( QueryAllPessoasFisica query)
+    public static async Task<IResult> Action( QueryAllParceiros query)
     {
         var result = await query.Execute();
 
