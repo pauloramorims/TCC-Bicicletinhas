@@ -15,6 +15,9 @@ public class ParceirosGet
         Console.WriteLine(filtro);
         var result = await query.Execute(filtro);
 
-        return Results.Ok(result);
+        if (Results.Json(result, null)!=null)
+            return Results.Ok(result);
+
+        return Results.BadRequest();
     }
 }

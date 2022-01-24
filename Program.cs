@@ -1,4 +1,5 @@
 using TirandoAsRodinhas.Endpoints;
+using TirandoAsRodinhas.Endpoints.Financeiro;
 using TirandoAsRodinhas.Endpoints.Parceiros;
 using TirandoAsRodinhas.Infra.Data;
 
@@ -7,6 +8,8 @@ builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["Conne
 
 builder.Services.AddScoped<QueryAllParceiros>();
 builder.Services.AddScoped<QueryParceiros>();
+builder.Services.AddScoped<QueryAllDocsFinanceiros>();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -25,5 +28,7 @@ app.UseHttpsRedirection();
 app.MapMethods(ParceirosGetAll.Template, ParceirosGetAll.Methods, ParceirosGetAll.Handle);
 
 app.MapMethods(ParceirosGet.Template, ParceirosGet.Methods, ParceirosGet.Handle);
+
+app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
 
 app.Run();
