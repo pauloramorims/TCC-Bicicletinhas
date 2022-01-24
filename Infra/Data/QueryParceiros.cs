@@ -18,7 +18,7 @@ public class QueryParceiros
         var query =
             @"
           SELECT
-               CPF_CNPJ, NOME_RAZAO, CEP, Logradouro, Complemento,
+               TIPO, CPF_CNPJ, NOME_RAZAO, CEP, Logradouro, Complemento,
                Numero, Bairro, Cidade, Estado, Email, TelCelular, TelFixo,
                CreatedOn, ParceiroId
           FROM VW_Parceiros
