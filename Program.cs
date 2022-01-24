@@ -14,7 +14,16 @@ builder.Services.AddScoped<QueryAllDocsFinanceiros>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("CorsPolicy", builder =>
+    builder.AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+});
+
 var app = builder.Build();
+
+app.UseCors("CorsPolicy");
 
 
 if (app.Environment.IsDevelopment())
@@ -23,7 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.MapMethods(ParceirosGetAll.Template, ParceirosGetAll.Methods, ParceirosGetAll.Handle);
 
@@ -32,5 +41,7 @@ app.MapMethods(ParceirosGet.Template, ParceirosGet.Methods, ParceirosGet.Handle)
 app.MapMethods(ParceirosPost.Template, ParceirosPost.Methods, ParceirosPost.Handle);
 
 app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
+
+app.MapMethods(DocFinanceiroPost.Template, DocFinanceiroPost.Methods, DocFinanceiroPost.Handle);
 
 app.Run();

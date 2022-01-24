@@ -17,7 +17,7 @@ public class QueryAllDocsFinanceiros
         var query =
             @"
           SELECT 
-                p.*, df.Movimentacao, df.Valor, df.Observacao, ep.CNPJ AS EMP_Cnpj, 
+                df.Id, p.*, df.Movimentacao, df.Valor, df.Observacao, ep.CNPJ AS EMP_Cnpj, 
                 ep.RazaoSocial as EMP_Razao, c.Email as EMP_Email, c.TelCelular as EMP_Celu, 
                 c.TelFixo as EMP_Fixo, e.CEP as EMP_Cep, e.Logradouro as EMP_Logradouro,
                 e.Bairro as EMP_Bairro, e.Numero as EMP_Numero, e.Complemento as EMP_Complemento,

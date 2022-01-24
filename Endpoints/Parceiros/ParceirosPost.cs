@@ -38,10 +38,33 @@ public class ParceirosPost
             EmpresaId = parceirosRequest.EmpresaID,
         };
 
-        context.Enderecos.Add(endereco);
-        context.Contatos.Add(contato);
-        context.Parceiros.Add(parceiro);
-        context.SaveChanges();
+        if (parceirosRequest.Tipo=="PESSOA FISICA") {
+            var pessoaFisica = new PessoaFisica (parceirosRequest.CPF_CNPJ, parceirosRequest.Nome_Razao) 
+            {
+                 ParceiroId = parceiro.Id
+            };
+            if (!pessoaFisica.IsValid) 
+                return Results.ValidationProblem(pessoaFisica.Notifications.ConvertToProblemDetails());
+
+            await context.PessoasFisicas.AddAsync(pessoaFisica);
+        }
+        else if (parceirosRequest.Tipo=="PESSOA JURIDICA") {
+            var pessoaJuridica = new PessoaJuridica {
+                RazaoSocial = parceirosRequest.Nome_Razao,
+                CNPJ = parceirosRequest.CPF_CNPJ,
+                ParceiroId = parceiro.Id
+            };
+            context.PessoaJuridicas.Add(pessoaJuridica);
+        }
+        else 
+        {
+            return Results.NotFound("O tipo de Pessoa deve ser informado: PESSOA FISICA OU PESSOA JURIDICA");
+        }
+
+        await context.Enderecos.AddAsync(endereco);
+        await context.Contatos.AddAsync(contato);
+        await context.Parceiros.AddAsync(parceiro);
+        await context.SaveChangesAsync();
 
         return Results.Created($"/cadastrar/{parceiro.Id}", parceiro.Id);
     }
