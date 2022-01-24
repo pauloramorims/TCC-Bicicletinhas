@@ -29,6 +29,8 @@ app.MapMethods(ParceirosGetAll.Template, ParceirosGetAll.Methods, ParceirosGetAl
 
 app.MapMethods(ParceirosGet.Template, ParceirosGet.Methods, ParceirosGet.Handle);
 
+app.MapMethods(ParceirosPost.Template, ParceirosPost.Methods, ParceirosPost.Handle);
+
 app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
 
 app.Run();
