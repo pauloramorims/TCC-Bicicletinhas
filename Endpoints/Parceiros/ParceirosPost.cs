@@ -33,8 +33,6 @@ public class ParceirosPost
         {
             EnderecoId  = endereco.Id,
             ContatoId = contato.Id,
-            CreatedOn = DateTime.Now,
-            EditedOn = DateTime.Now,
             EmpresaId = parceirosRequest.EmpresaID,
         };
 
@@ -54,7 +52,7 @@ public class ParceirosPost
                 CNPJ = parceirosRequest.CPF_CNPJ,
                 ParceiroId = parceiro.Id
             };
-            context.PessoaJuridicas.Add(pessoaJuridica);
+            await context.PessoaJuridicas.AddAsync(pessoaJuridica);
         }
         else 
         {

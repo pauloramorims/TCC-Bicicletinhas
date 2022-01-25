@@ -18,4 +18,10 @@ public class Parceiro : Entity
 
     public IList<DocFinanceiro> Documentos { get; set; }
 
+    public Parceiro()
+    {
+        CreatedOn = DateTime.Now;
+        EditedOn = DateTime.Now;
+    }
+
 }

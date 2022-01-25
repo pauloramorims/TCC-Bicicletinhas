@@ -32,16 +32,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+//Mapeamento dos endpoints 
 
+                          //Parceiros
 app.MapMethods(ParceirosGetAll.Template, ParceirosGetAll.Methods, ParceirosGetAll.Handle);
 
 app.MapMethods(ParceirosGet.Template, ParceirosGet.Methods, ParceirosGet.Handle);
 
 app.MapMethods(ParceirosPost.Template, ParceirosPost.Methods, ParceirosPost.Handle);
 
+
+                         //Documentos
 app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
 
 app.MapMethods(DocFinanceiroPost.Template, DocFinanceiroPost.Methods, DocFinanceiroPost.Handle);
+
+app.MapMethods(DocFinanceiroDelete.Template, DocFinanceiroDelete.Methods, DocFinanceiroDelete.Handle);
+
 
 app.Run();
