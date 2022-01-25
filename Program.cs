@@ -41,8 +41,9 @@ app.MapMethods(ParceirosGet.Template, ParceirosGet.Methods, ParceirosGet.Handle)
 
 app.MapMethods(ParceirosPost.Template, ParceirosPost.Methods, ParceirosPost.Handle);
 
+app.MapMethods(ParceiroDelete.Template, ParceiroDelete.Methods, ParceiroDelete.Handle);
 
-                         //Documentos
+//Documentos
 app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
 
 app.MapMethods(DocFinanceiroPost.Template, DocFinanceiroPost.Methods, DocFinanceiroPost.Handle);
