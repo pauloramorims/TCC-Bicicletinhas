@@ -1,6 +1,7 @@
 # TCC-Bicicletinhas
 
-*CONFIGURAÇÃO - BACKEND
+*CONFIGURAÇÃO - BACKEND*
+
 1 → Instalar ou estar instalado
      - .Net 6.0 (https://dotnet.microsoft.com/en-us/download/dotnet/6.0);
      - SQLServer 2017 (https://go.microsoft.com/fwlink/?linkid=853016);
