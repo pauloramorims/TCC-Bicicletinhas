@@ -1,0 +1,24 @@
+*CONFIGURAÇÃO - BACKEND
+→Instalar ou estar instalado
+    - .Net 6.0 (https://dotnet.microsoft.com/en-us/download/dotnet/6.0);
+    - SQLServer 2017 (https://go.microsoft.com/fwlink/?linkid=853016);
+    - Microsoft SQL Server Management Studio 18 ou outra IDE compatível com SQLServer 2017;
+     
+→Appsettings.json
+    -Abrir o arquivo appsettings.Development.json do projeto TirandoAsRodinhas
+        -Configurar a string de conexão "BiciSemRodinhas", alterando o ID e o Password para o padrão que seu SQLServer 
+         está configurado (User Id=  ;Password= )        
+
+→Entity Framework Core
+    -No powershell ou  cmd 
+        → entrar no local que está o projeto, utilizando o comando: cd "endereco da pasta" (C:\Users\paulo.silva\source\repos\TCC-Bicicletas\TirandoAsRodinhas)
+        → dotnet tool install --global dotnet-ef
+        → dotnet ef database update
+
+→Realizar o script de população e criação View no Banco de Dodos
+    -Arquivo View.txt
+    -Arquivo Popular.txt
+    
+→
+
+
