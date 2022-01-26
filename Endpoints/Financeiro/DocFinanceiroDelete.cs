@@ -4,7 +4,7 @@ namespace TirandoAsRodinhas.Endpoints.Financeiro;
 
 public class DocFinanceiroDelete
 {
-    public static string Template => "/financeiro/delete/{id:guid}";
+    public static string Template => "/financeiro/{id:guid}";
     public static string[] Methods => new string[] { HttpMethod.Delete.ToString() };
     public static Delegate Handle => Action;
 

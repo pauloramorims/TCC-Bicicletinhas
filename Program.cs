@@ -29,7 +29,10 @@ app.UseCors("CorsPolicy");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TirandoAsRodinhas V1");
+        c.RoutePrefix = string.Empty;
+    });
 }
 
 //Mapeamento dos endpoints 
@@ -43,7 +46,7 @@ app.MapMethods(ParceirosPost.Template, ParceirosPost.Methods, ParceirosPost.Hand
 
 app.MapMethods(ParceiroDelete.Template, ParceiroDelete.Methods, ParceiroDelete.Handle);
 
-//Documentos
+                         //Documentos
 app.MapMethods(DocFinanceirosGetAll.Template, DocFinanceirosGetAll.Methods, DocFinanceirosGetAll.Handle);
 
 app.MapMethods(DocFinanceiroPost.Template, DocFinanceiroPost.Methods, DocFinanceiroPost.Handle);

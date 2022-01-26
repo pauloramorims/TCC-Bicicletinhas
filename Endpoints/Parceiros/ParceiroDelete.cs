@@ -5,7 +5,7 @@ namespace TirandoAsRodinhas.Endpoints.Parceiros;
 
 public class ParceiroDelete
 {
-    public static string Template => "/parceiros/delete/{id:guid}";
+    public static string Template => "/parceiros/{id:guid}";
     public static string[] Methods => new string[] { HttpMethod.Delete.ToString() };
     public static Delegate Handle => Action;
     
@@ -25,11 +25,11 @@ public class ParceiroDelete
 
         var consultaDocumento = context.DocsFinanceiros.Where(p => p.ParceiroId == id).ToList();       //Buscando todos os documentos vinculados a Parceiro
             
-        var consultaPf = context.PessoasFisicas.Where(p => p.ParceiroId == id).First();        //Buscando se há o ID na tabela de Pesssoas Fisica
+        var consultaPf = context.PessoasFisicas.Where(p => p.ParceiroId == id).First();                //Buscando se há o ID na tabela de Pesssoas Fisica
 
         if (consultaPf == null) 
         {
-            var consultaPj = context.PessoaJuridicas.Where(p => p.ParceiroId == id).First();    //Buscando se há o ID na tabela de Pesssoas Juridica
+            var consultaPj = context.PessoaJuridicas.Where(p => p.ParceiroId == id).First();           //Buscando se há o ID na tabela de Pesssoas Juridica
 
             if (consultaPj == null) { return Results.NotFound(); }
 
